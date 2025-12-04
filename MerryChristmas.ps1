@@ -85,11 +85,14 @@ foreach ($kid in $naughtyKids) {
 
 # Optional  Santa's Intel
 if ($ShowSantasIntel) {
+    $uniqueNice    = $niceKids    | Sort-Object Behavior -Unique
+    $uniqueNaughty = $naughtyKids | Sort-Object Behavior -Unique
+
     Write-Host "`n=== Santa's Nice List ===" -ForegroundColor Green
-    $niceKids | Format-Table Name, Behavior, Status -AutoSize
+    $uniqueNice | Format-Table Name, Behavior, Status -AutoSize
 
     Write-Host "`n=== Santa's Naughty List ===" -ForegroundColor Red
-    $naughtyKids | Format-Table Name, Behavior, Status -AutoSize
+    $uniqueNaughty | Format-Table Name, Behavior, Status -AutoSize
 }
 
 
