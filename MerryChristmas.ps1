@@ -33,7 +33,7 @@ for ($pass = 1; $pass -le 2; $pass++) {
     foreach ($behavior in $SantasList) {
         $lower = $behavior.ToLower()
 
-        # Default Assumption: All Kids Are Naughty! Muuuuaaahahahaha! J/k
+# Default Assumption: All Kids Are Naughty! Muuuuaaahahahaha! J/k
         $status = "Naughty"
         $notes  = "Behavior did not meet Nice criteria"
         $kidDeservesPresent = $false
